@@ -10,7 +10,7 @@
 //Step2: Whenever you encounter a dublicate replace it with unique.
 
 function removeDuplicate(nums){
-    let j = 0;
+    let k = 0;
     for(i = 0; i < nums.length; i++){
         if(nums.indexOf(nums[i] === i)){
             nums[k] = nums[i];
