@@ -52,27 +52,32 @@
 
 
 //Parent Class
-class Car{
-    constructor(brand, model, color){
-        this.brand = brand;
-        this.model = model;
-        this.color = color;
-    }
-    get CarDetails(){ //getter function
-        console.log(`${this.brand}, ${this.model}, ${this.color}`);
-    }
+// class Car{
+//     constructor(brand, model, color){
+//         this.brand = brand;
+//         this.model = model;
+//         this.color = color;
+//     }
+//     get CarDetails(){ //getter function
+//         console.log(`${this.brand}, ${this.model}, ${this.color}`);
+//     }
     
-}
-//Sub-class child Class
-class Bike extends Car{
-    constructor(brand, model, color){
-        super(brand, model, color);
-    }
-    get GetBikeDetails(){
-        console.log(`${this.brand}, ${this.model}, ${this.color}`);
-    }
-}
-let Car1 = new Car();
-const bike1 = new Bike('Honda', 'sp125', 'darkblue');
-bike1.GetBikeDetails;
-Car1.CarDetails;
+// }
+// //Sub-class child Class
+// class Bike extends Car{
+//     constructor(brand, model, color){
+//         super(brand, model, color);
+//     }
+//     get GetBikeDetails(){
+//         console.log(`${this.brand}, ${this.model}, ${this.color}`);
+//     }
+// }
+// let Car1 = new Car();
+// const bike1 = new Bike('Honda', 'sp125', 'darkblue');
+// bike1.GetBikeDetails;
+// Car1.CarDetails;
+
+
+const unique = new Set([1,2,3]);
+const iterator = unique.values(); //both keys and values give same output.
+console.log(iterator); // {1,2,3}
