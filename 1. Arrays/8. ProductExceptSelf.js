@@ -13,7 +13,10 @@
 //Brute Force: O(N^2)
 //Write two for-loops, start at zero and get a product of everything expect when i == j;
 
-//Approach: sliding window outwards
+// Approach 2: Sliding window : O(n)/O(n^2)
+//Step1: Create a function which will expand outwards from center.
+//Step2: While expanding outwards calculate the product.
+//Step3: push the product inside an array.
 
 
 function productExceptSelf(nums){
