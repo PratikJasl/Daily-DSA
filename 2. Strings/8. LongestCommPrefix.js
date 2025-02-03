@@ -10,7 +10,7 @@
  //Step2: comapre the first letter of the first string with all other strings.
  //Step3: if all the first letters are equal add it to prefix.
  //step4: else check the next letter.
- //Step5 return the prefix at end.
+ //Step5: return the prefix at end.
 
  var longestCommonPrefix = function(strs) {
     let prefix = '';
