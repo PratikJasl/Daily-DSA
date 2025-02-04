@@ -19,41 +19,73 @@
 //Step3: push the product inside an array.
 
 
-function productExceptSelf(nums){
+// function productExceptSelf(nums){
+//     let answer = [];
+//     let arrLen = nums.length;
+
+//     function expandOutwards(left, right){
+//         let product = 1;
+//         while(left >= 0 && right <= arrLen-1){
+//             if(left === 0){
+//                 right ++;
+//                 if(right <= arrLen - 1){
+//                     product = product * nums[right];
+//                     console.log('line 28:', left, right, product);
+//                 }
+//             }else if(right === arrLen-1){
+//                 left--;
+//                 product = product * nums[left];
+//                 console.log('line 33:', left, right, product);
+//             }
+//             else{
+//                 left--;
+//                 right++;
+//                 product = product * nums[left] * nums[right];
+//                 console.log('line 39:', left, right, product);
+//             }
+//         }
+//         return product;
+//     }
+
+//     for(let i = 0; i < arrLen; i++){
+//         let res = expandOutwards(i,i);
+//         answer.push(res);
+//     }
+
+//     return answer;
+// }
+
+//Approach1:
+//Step1: iterate through the array and create product of left elements.
+//Step2: iterate through the array and create produt of right elements.
+//Step3: Mulitply the left and right array.
+
+// nums = [1,2,3,4]
+// right= [24,12,4,1]
+// [24,12,8,6]
+
+
+var productExceptSelf = function(nums) {
+    let left = [];
+    let right = [];
     let answer = [];
-    let arrLen = nums.length;
-
-    function expandOutwards(left, right){
-        let product = 1;
-        while(left >= 0 && right <= arrLen-1){
-            if(left === 0){
-                right ++;
-                if(right <= arrLen - 1){
-                    product = product * nums[right];
-                    console.log('line 28:', left, right, product);
-                }
-            }else if(right === arrLen-1){
-                left--;
-                product = product * nums[left];
-                console.log('line 33:', left, right, product);
-            }
-            else{
-                left--;
-                right++;
-                product = product * nums[left] * nums[right];
-                console.log('line 39:', left, right, product);
-            }
-        }
-        return product;
+    let product = 1;
+    //Left elements
+    left[0] = 1;
+    for(let i = 1; i < nums.length; i++){
+        left[i] = left[i-1] * nums[i-1];
     }
-
-    for(let i = 0; i < arrLen; i++){
-        let res = expandOutwards(i,i);
-        answer.push(res);
+    //right elements
+    right[nums.length-1] = 1;
+    for(let i = nums.length-2 ; i >= 0; i--){
+        right[i] = right[i+1] * nums[i+1];
     }
-
+    //Output element
+    for(let j = 0; j < right.length; j++){
+        answer[j] = left[j] * right[j];
+    }
     return answer;
-}
+};
 console.log(productExceptSelf([-1,1,0,-3,3]));
 //[1,2,3,4] l=2,r=2 arrlen = 3
 //answer = [24,]
