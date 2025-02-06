@@ -17,5 +17,6 @@ var canJump = function(nums) {
             target = i;
         }
     }
+    
     return target === 0;
 };
