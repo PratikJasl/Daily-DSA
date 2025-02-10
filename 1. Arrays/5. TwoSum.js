@@ -13,23 +13,23 @@
 //Step2: if they add up to the target return left and right.
 //Step3: Else if sum of left and right is less than target move left forward else move right backward.
 
-function TwoSum(nums, target){
-    let right = nums.length - 1;
-    let left = 0;
+// function TwoSum(nums, target){
+//     let right = nums.length - 1;
+//     let left = 0;
 
-    while(left < right){
-        console.log(nums[left] + nums[right]);
-        if( nums[left] + nums[right] === target){
-            return [left, right];
-        }
-        else if(nums[left] + nums[right] < target){
-            left ++;
-        }
-        else{
-            right --;
-        }
-    }
-}
+//     while(left < right){
+//         console.log(nums[left] + nums[right]);
+//         if( nums[left] + nums[right] === target){
+//             return [left, right];
+//         }
+//         else if(nums[left] + nums[right] < target){
+//             left ++;
+//         }
+//         else{
+//             right --;
+//         }
+//     }
+// }
 
 //Approach 2: O(n)
 //Step1: Create a Map and iterate through the array.
