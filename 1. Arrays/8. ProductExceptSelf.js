@@ -60,9 +60,12 @@
 //Step2: iterate through the array and create produt of right elements.
 //Step3: Mulitply the left and right array.
 
+// Example:
 // nums = [1,2,3,4]
+// left = [1,1,2,6]
 // right= [24,12,4,1]
 // [24,12,8,6]
+
 
 
 var productExceptSelf = function(nums) {
@@ -70,7 +73,7 @@ var productExceptSelf = function(nums) {
     let right = [];
     let answer = [];
     let product = 1;
-    //Left elements
+    //Left elements //[1,1,2,6,]
     left[0] = 1;
     for(let i = 1; i < nums.length; i++){
         left[i] = left[i-1] * nums[i-1];

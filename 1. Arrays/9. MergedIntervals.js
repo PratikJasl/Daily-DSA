@@ -17,6 +17,8 @@ Step3: If the last index of the first interval is greater, than update the last 
 Step4: Loop thourgh the whole loop.
 */
 
+
+
 var merge = function(intervals) {
     if (intervals.length == 0) return [];
     //sort array in ascending order.
