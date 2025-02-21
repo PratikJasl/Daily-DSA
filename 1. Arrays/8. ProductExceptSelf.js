@@ -89,6 +89,7 @@ var productExceptSelf = function(nums) {
     }
     return answer;
 };
+
 console.log(productExceptSelf([-1,1,0,-3,3]));
 //[1,2,3,4] l=2,r=2 arrlen = 3
 //answer = [24,]
