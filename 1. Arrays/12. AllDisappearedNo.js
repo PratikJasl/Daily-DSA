@@ -17,10 +17,12 @@
 var findDisappearedNumbers = function(nums) {
     let temp = new Set(nums);
     let result = [];
+
     for(let i = 1; i < nums.length+1; i++){
           if(!temp.has(i)){
               result.push(i);
           }
     }
+    
     return result
   };
