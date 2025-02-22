@@ -11,7 +11,7 @@
 
 var majorityElement = function(nums) {
     let map = new Map();
-    let count = 0;
+    
     for(let i = 0; i < nums.length; i++){
         if(!map.has(nums[i])){
             map.set(nums[i], 1);
@@ -19,7 +19,8 @@ var majorityElement = function(nums) {
             map.set(nums[i], map.get(nums[i]) + 1);
         }
     }
-    console.log(map);
+
+    // console.log(map);
     for(let i = 0; i < nums.length; i++){
         if(map.get(nums[i]) > (nums.length/2)){
             return nums[i]
