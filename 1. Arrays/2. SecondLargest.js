@@ -12,8 +12,8 @@
 //Step3: if it is greater than 2nd max update that.
 
 function findSecondLargest(nums){
-    if(nums.length < 2) return -1;
 
+    if(nums.length < 2) return -1;
     let largest = -Infinity;
     let secondLargest = -Infinity;
 
@@ -25,6 +25,7 @@ function findSecondLargest(nums){
             secondLargest = nums[i];
         }
     }
+    
     return secondLargest;
 }
 
