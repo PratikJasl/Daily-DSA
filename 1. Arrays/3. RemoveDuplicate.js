@@ -11,11 +11,13 @@
 
 function removeDuplicate(nums){
     let k = 0;
+
     for(i = 0; i < nums.length; i++){
         if(nums.indexOf(nums[i]) === i){
             nums[k] = nums[i];
             k++;
         }
     }
+    
     return k;
 }
