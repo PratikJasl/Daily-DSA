@@ -15,9 +15,11 @@
 //Step2: Add it to the front.
 
 function rotateArray(nums, k){
+
     k = k % nums.length; //this is added to prevent the cases where nums.length is greater than K
     let res = nums.splice(nums.length - k);
     nums.unshift(...res);
+    
 }
 
 console.log(rotateArray([-1,-100,3,99],2));
