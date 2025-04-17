@@ -14,6 +14,7 @@
 //Step5: If it does not add the element to the new array.
 
 function FindReoccuring(arr){
+
     if(arr.length > 1){
         let Obj = {};
         for(let i = 0; i < arr.length; i ++){
@@ -28,6 +29,7 @@ function FindReoccuring(arr){
         return "no re-occuring element"
     }
     return "invalid array length"
+    
 }
 
 console.log(FindReoccuring([2,5,1,2,3,5,1,2,4]));
