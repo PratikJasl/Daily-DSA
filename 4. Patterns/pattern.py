@@ -84,6 +84,14 @@ print(string)
 string = ""
 n = 5
 for i in range(0, n):
+    for j in range(0, n-i-1): #Adds space to string.
+        string += " "
+    for j in range (0, 2*i+1): #Adds star to string.
+        string += "*"
+    for j in range(0, n-i-1): #Adds space to string.
+        string += " "
+    string += '\n'
+for i in range (0, n):
     for j in range(0, i): #Adds space to string.
         string += " "
     for j in range (0, 2*n -(2*i +1)): #Adds star to string.
@@ -91,4 +99,5 @@ for i in range(0, n):
     for j in range(0, i): #Adds space to string.
         string += " "
     string += '\n'
+
 print(string)
