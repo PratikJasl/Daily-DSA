@@ -16,4 +16,4 @@ def IsPallindrome(N):
     return revNum == original
 
 
-IsPallindrome(122)
+IsPallindrome(122) 
