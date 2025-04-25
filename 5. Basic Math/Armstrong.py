@@ -1,8 +1,8 @@
 # Armstrong Number: Any number whose individual digits square adds up to that number.
-#Objective: To check if a number is armstrong or not.
+# Objective: To check if a number is armstrong or not.
 
-#Input: 371 = 3^3 + 7^3 + 1^3 == 371
-#Output: true
+# Input: 371 = 3^3 + 7^3 + 1^3 == 371
+# Output: true
 
 def CheckArmstrong(N):
     n = N

@@ -1,4 +1,4 @@
-#Objective: Reverse a digit, ig it has trailing digits those will not be included.
+#Objective: Reverse a digit, if it has 0's in trailing digits those will not be included.
 #Input: 1400 
 #Output: 1400--> 0041 --> 41
 

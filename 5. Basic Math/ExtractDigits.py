@@ -1,6 +1,7 @@
 #Concept 1: Extraction of digits.
 
 #Input: 7789
+#output: 9,8,7,7
 #Objective: extract individual digits from 7789
 
 #Approach1: Convert 7789 into a string, iterate over it and extract the digits and convert them back.
@@ -9,7 +10,7 @@
 #EXPLANATION:
 # Step1: Modolue 7789 with 10 i.e 7789 % 10 = 9 
 # Any number not ending with 0 module with 10 will give the last digit. Like in this case 9.
-# Step2: Now divide 7789 with 10 and consider the integer part i.e 7789/10 = 778.9 = 778.
+# Step2: Now divide 7789 with 10 and consider the integer part i.e 7789/10 = 778.9 = 778
 # Repeat Step1 and Step2 to extract all the digits out of 7789.
 
 # 1) 7789 % 10 = 9
