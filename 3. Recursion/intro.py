@@ -1,10 +1,10 @@
 # Recursion: When a function calls itself again and again, until a specified condition is met.
 
-# Base Condition: The condition 
+# Base Condition: The condition which terminates recursion.
 
 
 
-# Example2: Infinite recursion code
+# Example: Infinite recursion code
 
 def PrintCount():
     print(1)
