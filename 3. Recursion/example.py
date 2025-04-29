@@ -78,7 +78,6 @@
 #     arr[start] = arr[end]
 #     arr[end] = temp
 #     ReverseArr(start+1, end-1)
-
 # ReverseArr(0, len(arr)-1)
 # print('reversed array is:', arr)
 
@@ -92,20 +91,23 @@
 #     if(str[start] != str[end]):
 #         return False
 #     return checkPallindrome(start+1, end-1)
-
-
 # print("Pallindrome Check:", checkPallindrome(0, len(str)-1))
 
 ##Example8: Fibonnaci Number: Its the sum of i + (1+1)
-
 #0,1 --> 1 --> 2 --> 3 --> 5 --> 8
 # F(5) --> F(4) + F(3) --> F(3) + F(2) + F(2) + F(1) --> F(2) + F(1) + F(1) + F(0)
 # --> F(1) + F(0) + F(0) + F(0) --> F(0) + F(0) + F(0) + F(0)
 # --> F(0) + F(0) + F(0) + F(0) --> 0+1+1+2+3+5 = 8
+# def Fibonacci(N):
+#     if(N <= 1):
+#         return N
+#     return Fibonacci(N-1) + Fibonacci(N-2)
+# print("Fibonacci Number is:", Fibonacci(5))
 
+##Fibonacci without recursion.
 def Fibonacci(N):
-    if(N <= 1):
-        return N
-    return Fibonacci(N-1) + Fibonacci(N-2)
-
-print("Fibonacci Number is:", Fibonacci(5))
+    for i in range(N, -1, -1):
+        print((i-1) + (i-2))
+        return (i-1) + (i-2)
+    
+print(Fibonacci(4))

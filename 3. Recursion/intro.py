@@ -5,17 +5,14 @@
 
 
 # Example: Infinite recursion code
-
 def PrintCount():
     print(1)
     PrintCount()
-
 PrintCount()
 
 # Example: Finite recursion code.
 global count
 count = 0
-
 def Print1():
     global count
     if count == 5 : #Base Condition
@@ -23,5 +20,4 @@ def Print1():
     print(1)
     count += 1
     Print1()
-
 Print1()
