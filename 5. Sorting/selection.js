@@ -1,8 +1,8 @@
+//Time Complexity: O(n^2)
 function selectionSort(arr){
     let n = arr.length;
     for(let i = 0; i < n; i++){
         let minIndex = i;
-
         //@dev: Iterate the whole loop and find minimum.
         for(let j = i+1; j < n; j++){
             if(arr[j] < arr[minIndex]){
