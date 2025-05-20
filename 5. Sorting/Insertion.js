@@ -15,4 +15,4 @@ function InsertionSort(arr){
 }
 
 
-InsertionSort([8,3,1,9,7,2,4,5,6])
+InsertionSort([12,14,14,7,67,27])
