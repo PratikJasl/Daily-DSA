@@ -4,7 +4,7 @@ function BubbleSort(arr){
     let swapped;
     do {
         swapped = false
-        for(let i = 0; i < n; i++){
+        for(let i = 0; i < n-1; i++){
             if(arr[i] > arr[i+1]){
                 temp = arr[i]
                 arr[i] = arr[i+1]
@@ -17,4 +17,4 @@ function BubbleSort(arr){
     console.log(arr)
 }
 
-BubbleSort([9,2,7,1,8,5,8]);
+BubbleSort([12,14,14,7,67,27]);
