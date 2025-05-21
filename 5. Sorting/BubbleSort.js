@@ -1,3 +1,4 @@
+//Approach: compare adjust and swap the largerst to right, after one iteration largest is to the right reduce array size. 
 
 function BubbleSort(arr){
     let n = arr.length;

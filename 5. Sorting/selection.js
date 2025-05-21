@@ -1,3 +1,5 @@
+//Approach: Find the minimum value and swap it.
+
 //Time Complexity: O(n^2)
 function selectionSort(arr){
     let n = arr.length;

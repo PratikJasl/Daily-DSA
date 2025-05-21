@@ -1,3 +1,4 @@
+//Approach: Compare adjucent elements, if you find a minimum keep shifting it to the left.
 
 function InsertionSort(arr){
     let n = arr.length;
