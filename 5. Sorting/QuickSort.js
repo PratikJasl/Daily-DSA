@@ -1,0 +1,1 @@
+//@dev: Quick Sort can sort elements in both ascending and descending order with little modifications.
