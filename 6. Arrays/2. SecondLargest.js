@@ -1,27 +1,24 @@
-//Find the second largest element in an array. Else return -1.
+//Q: Given an array of integers nums, return the second-largest element in the array. If the second-largest element does not exist, return -1.
 
-// Example:
-// Input: Given a sequence of five numbers 2, 4, 5, 6, 8.
+//Input: array of integers
+//Output: Second Largest element, or -1.
 
-// Output:  6
-
-
-//Approach: O(n)
-//Step1: Iterate through the array.
-//Step2: if the element is greater than max update max. 
-//Step3: if it is greater than 2nd max update that.
+//Approach:  T: O(n) | S: O(1)
+//Step1: Create a variable largest and second largest variable and initialize it -1.
+//Step2: Iterate through the array from 0.
+//Step3: Compare element with largest, if element is larger than largest, we update the largest and second largest.
+//Step4: Else we check if the element is less than largest and greater than second largest, if ues update second largest.
 
 function findSecondLargest(nums){
+    let largest = -1;
+    let secondLargest = -1;
+    let n = nums.length;
 
-    if(nums.length < 2) return -1;
-    let largest = -Infinity;
-    let secondLargest = -Infinity;
-
-    for(let i = 0; i < nums.length; i++){
+    for( let i = 0; i < n;  i++){
         if(nums[i] > largest){
             secondLargest = largest;
             largest = nums[i];
-        }else if(nums[i] > secondLargest){
+        }else if(nums[i] < largest && nums[i] > secondLargest){
             secondLargest = nums[i];
         }
     }
@@ -30,8 +27,3 @@ function findSecondLargest(nums){
 }
 
 console.log(findSecondLargest([2, 10, 5, 6, 8]));
-
-
-//Approach2: O(nlogn)
-//Step1: Sort the array.
-//Step2: Return length -2 element.
