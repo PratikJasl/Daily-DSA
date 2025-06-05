@@ -8,10 +8,10 @@
 //Step2: We add the spliced part to the front of the array.
 
 function LeftRotateBy1(arr){
-    let newArr = arr.splice(1, arr.length-1);
+
+    let newArr = arr.splice(1);
     arr.unshift(...newArr);
-    console.log("New Array:", arr);
-    return arr;
+
 }
 
 LeftRotateBy1([1,2,3,4,5]);
