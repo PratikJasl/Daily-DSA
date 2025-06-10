@@ -5,7 +5,7 @@
 
 //Approach: Using Map T: O(n) | S: O(n)
 //Step1: Add the two arrays
-//Step2: Iterate through the added array and create a map.
+//Step2: Iterate through the added array and create a map of frequency.
 //Step3: Convert the keys of the map to an array.
 
 
