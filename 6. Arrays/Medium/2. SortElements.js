@@ -2,7 +2,7 @@
 // Write a program to in-place sort the array without using inbuilt sort functions.
 
 // Input: nums = [2,0,2,1,1,0]
-// Output: [0,0,1,1,2,2]a
+// Output: [0,0,1,1,2,2]
 
 function sortElements(nums){
     let low = 0;
