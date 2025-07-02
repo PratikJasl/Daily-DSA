@@ -1,10 +1,10 @@
 async function cookRiceAsync() {
   console.log("Putting rice on to cook... (will be ready in 3 seconds)");
-  return resolve => {
+  return 
     setTimeout(() => {
       resolve("Rice is cooked! From Promise after 3sec");
     }, 3000); 
-  };
+  
 }
 
 async function serveMealAsync() {
