@@ -1,7 +1,6 @@
 //Leetcode: 88: Merge Sorted Array: https://leetcode.com/problems/merge-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150
 
-
-//inputs: nums1/nums2, m/n
+//inputs: nums1 / nums2, m/n
 //objective: merge nums1 and nums2;
 
 //Approach: O(nlogn)
