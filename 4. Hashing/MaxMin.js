@@ -10,7 +10,9 @@ let arr = [1,2,1,3,3,4,4,5,2,2,2];
 let map = new Map();
 let count = 1;
 let maxFrequency = 0;
-let mostFrequest = [];
+let leastFrequecy = 1;
+let mostFrequent = [];
+let leastFrequent = [];
 
 function countFrequency(arr){
     for(let i = 0; i < arr.length; i++){
@@ -25,13 +27,21 @@ function countFrequency(arr){
     map.forEach((value, key) => {
         if(value > maxFrequency){
             maxFrequency = value
-            mostFrequest = [key];
+            mostFrequent = [key];
         }else if(value == maxFrequency){
-            mostFrequest.push(key);
+            mostFrequent.push(key);
         }
     })
 
-    console.log(mostFrequest)
+    map.forEach((value, key) => {
+        if(value <= leastFrequecy){
+            leastFrequecy = value
+            leastFrequent = [key];
+        }else if(value == maxFrequency){
+            leastFrequent.push(key);
+        }
+    })
+    console.log(mostFrequent, leastFrequent)
 }
 
 countFrequency(arr)
