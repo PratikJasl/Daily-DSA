@@ -1,5 +1,5 @@
 //Count the frequency of occurance of elements of an array.
-let arr = [1,2,1,3,3,4,4,5,2, 2]
+let arr = [1,2,1,3,3,4,4,5,2,2,2]
 
 function countFrequency(arr){
     let count = 0;
