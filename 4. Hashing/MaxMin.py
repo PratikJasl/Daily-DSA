@@ -14,14 +14,14 @@ def countFrequency(arr):
     mostFrequent = []
     leastFrequent = []
 
-    for item in arr:
+    for item in arr: #Build the map.
         if item not in map:
             map[item] = 1
         else:
             map[item] += 1
     print(map)
 
-    for value, count in map.items():
+    for value, count in map.items(): #iterate over the map and find most frequent.
         if count > maxFrequency:
             maxFrequency = count
             mostFrequent = [value]
@@ -29,7 +29,7 @@ def countFrequency(arr):
             mostFrequent.append(value)
     print('most frequent:',mostFrequent)
 
-    for value, count in map.items():
+    for value, count in map.items(): #iterate over the map and find least frequent.
         if count <= leastFrequency:
             leastFrequency = count
             leastFrequent = [value]
