@@ -1,6 +1,6 @@
 #Write a function to find the highest occuring element in an array.
 
-#Approach: Using Hash
+#Approach: Using Hash: Time: O(N) Space: O(N)
 #Step1: Create a frequency map.
 #Step2: iterate over the map.
 #Step3: compare value with maxFrequency
