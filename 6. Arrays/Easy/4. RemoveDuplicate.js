@@ -24,7 +24,7 @@ function removeDuplicate(nums){
     return k;
 }
 
-//Approach2: T: O(N) | S: O(1)
+//Approach2: T: O(N) | S: O(1)  BEST SOLUTION
 //Step1: Maintain 2 pointers i=0/j=1
 //Step2: Iterate through the loop and whenever arr[i] and arr[j] are different, replace arr[i] and increment i.
 //Step3: At the end return i+1
