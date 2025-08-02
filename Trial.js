@@ -1,3 +1,5 @@
+
+//Checking the async nature of JS.
 async function cookRiceAsync() {
   console.log("Putting rice on to cook... (will be ready in 3 seconds)");
   return 
