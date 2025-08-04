@@ -1,5 +1,6 @@
 
 //Checking the async nature of JS.
+
 async function cookRiceAsync() {
   console.log("Putting rice on to cook... (will be ready in 3 seconds)");
   return 
@@ -9,6 +10,7 @@ async function cookRiceAsync() {
   
 }
 
+// The logic executes A, 1,2,3 and then await is triggered.f
 async function serveMealAsync() {
   console.log("1. Chef: Starting to prepare meal...");
   console.log("2. Chef: While rice is cooking, I can clean the counter or pour drinks!");
