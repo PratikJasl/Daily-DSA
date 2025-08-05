@@ -1,6 +1,6 @@
 #Binary Search Algorithm
 nums = [3, 4, 6, 7, 9, 12, 16, 17]
-target = 16
+target = 3
 
 #Iterative Approach
 def BinarySearch(nums, target):
