@@ -6,6 +6,7 @@
 # // Output: [0,1]
 # // Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
+#Using Map and compliment.
 def TwoSum(nums, target):
     if(len(nums) < 1): return 0
     map = {}
@@ -18,3 +19,5 @@ def TwoSum(nums, target):
     return "Target not in given array"
 
 print(TwoSum([2,7,11,15], 9))
+
+#Can be achieved using two pointer as well.
