@@ -6,8 +6,9 @@
 # Explanation: Index 3 is the smallest index such that arr[3] > x.
 
 #Approach:
-# Step1: implement BS
-# Step2: if we find an element >x at mid. decrement high to mid-1 and check no other element before satify the condition.
+# Step1: implement BS but do not return at mid.
+# Step2: if we find an element >= x at mid update output and decrement high to mid-1
+# Step3: if element is not >=x increment low to mid+1
 
 def upperBound(nums, target):
     n = len(nums)
