@@ -14,7 +14,7 @@ def lowerBound(nums, target):
     n = len(nums)
     low = 0
     high = n - 1
-    output = n
+    output = -1
 
     while(low <= high):
         mid = (low + high) // 2
@@ -28,5 +28,5 @@ def lowerBound(nums, target):
 
 
 nums = [3,5,8,15,19]
-target = 9
+target = 1
 print(lowerBound(nums, target))
