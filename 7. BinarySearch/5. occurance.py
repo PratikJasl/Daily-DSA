@@ -59,7 +59,6 @@ def upperBound(nums, x):
             low = mid + 1
     return ans
 
-
 def LastOccurance(nums, target):
         start = lowerBound(nums, target)
         if start == -1 or nums[start] != target:
