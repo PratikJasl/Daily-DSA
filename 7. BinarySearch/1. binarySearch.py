@@ -1,6 +1,7 @@
 #Binary Search Algorithm
 nums = [3, 4, 6, 7, 9, 12, 16, 17]
-target = 3
+num1 = [4,5,6,7,0,1,2]
+target = 0
 
 #Iterative Approach
 def BinarySearch(nums, target):
@@ -34,5 +35,5 @@ def binarySearchRec(nums, target, low, high):
         return binarySearchRec(nums, target, low, mid-1)
 
 
-print(BinarySearch(nums, target))
-print(binarySearchRec(nums,target, 0, 7 ))
+print(BinarySearch(num1, target))
+# print(binarySearchRec(nums,target, 0, 7 ))
