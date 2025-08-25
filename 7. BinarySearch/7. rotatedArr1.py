@@ -10,4 +10,5 @@
 #Step2: Return the index if target is found else -1.
 
 #Optimal: Binary Search O(logN)
-#Step1: 
+#Step1: Create low, high and mid indexes
+#Step2: Check is target is greater than low or less then high to determine which side is valid.
