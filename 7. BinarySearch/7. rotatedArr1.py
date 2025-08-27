@@ -12,3 +12,4 @@
 #Optimal: Binary Search O(logN)
 #Step1: Create low, high and mid indexes
 #Step2: Check is target is greater than low or less then high to determine which side is valid.
+#Step3: Check edge cases
