@@ -16,3 +16,5 @@
 
 def rotationTarget():
     return "Print target"
+
+#Make sure to do atleast one day question per day.
