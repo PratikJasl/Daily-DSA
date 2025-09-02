@@ -9,33 +9,76 @@
 #Step1: Iterte through the array.
 #Step2: Return the index if target is found else -1.
 
-#Optimal: Binary Search O(logN)
+#Less Optimal: Binary Search O(logN) : Fails in some Edge cases
 #Step1: Create low, high and mid indexes
 #Step2: Check is target is greater than low or less then high to determine which side is valid.
-#Step3: Check edge cases.
+#Step3: perform Binary Search on that side.
+#Step4: If element is not found perfom BS on other side
+
 def binarySearch(low, high, arr, target):
     while(low <= high):
         mid = (low + high) // 2
         if(arr[mid] == target):
             return mid
-        elif(arr[mid] < target):
+        elif(target > arr[mid]):
             low = mid + 1
         else:
             high = mid - 1
-    return 0
-
+    return -1
 
 def findTargetInRotatedArray(arr, target):
     n = len(arr)
     high = n - 1
     low = 0
-    ans = 0
-
+    ans = -1
     mid = (low + high) // 2
 
-    if(arr[low] < arr[mid]):
-        ans = binarySearch(low, mid, arr, target)
-    else:
-        ans = binarySearch(mid, high, arr, target)
+    if(arr(mid) == target):
+        return mid
+    
+    ans = binarySearch(low, mid, arr, target)
 
+    if(ans == -1):
+        ans = binarySearch(mid+1, high, arr, target)
+
+    print('target found on :', ans)
     return ans
+
+arr = [3,1]
+findTargetInRotatedArray(arr, 1)
+
+#Optimal Solution: BS O(LogN)
+#Step1: Create low, high and mid Index
+#Step2: Check which part of the array is sorted
+#Step3: On the sorted part search of the element
+#Step4: if not found on sorted part find on non-sorted part
+
+def search(arr, n, k):
+    low = 0
+    high = n - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        # if mid points the target
+        if arr[mid] == k:
+            return mid
+
+        # if left part is sorted
+        if arr[low] <= arr[mid]:
+            if arr[low] <= k and k <= arr[mid]:
+                # element exists
+                high = mid - 1
+            else:
+                # element does not exist
+                low = mid + 1
+                
+        # if right part is sorted
+        else:  
+            if arr[mid] <= k and k <= arr[high]:
+                # element exists
+                low = mid + 1
+            else:
+                # element does not exist
+                high = mid - 1
+    return -1
