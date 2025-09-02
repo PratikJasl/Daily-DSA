@@ -13,8 +13,29 @@
 #Step1: Create low, high and mid indexes
 #Step2: Check is target is greater than low or less then high to determine which side is valid.
 #Step3: Check edge cases.
+def binarySearch(low, high, arr, target):
+    while(low <= high):
+        mid = (low + high) // 2
+        if(arr[mid] == target):
+            return mid
+        elif(arr[mid] < target):
+            low = mid + 1
+        else:
+            high = mid - 1
+    return 0
 
-def rotationTarget():
-    return "Print target"
 
-#Make sure to do atleast one day question per day.
+def findTargetInRotatedArray(arr, target):
+    n = len(arr)
+    high = n - 1
+    low = 0
+    ans = 0
+
+    mid = (low + high) // 2
+
+    if(arr[low] < arr[mid]):
+        ans = binarySearch(low, mid, arr, target)
+    else:
+        ans = binarySearch(mid, high, arr, target)
+
+    return ans
