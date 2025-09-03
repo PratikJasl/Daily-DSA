@@ -49,4 +49,5 @@ def countOccurance(nums, target):
     count = (end - start) + 1
     return count
 
+
 print(countOccurance([1,2,2,5,5,5], 1))

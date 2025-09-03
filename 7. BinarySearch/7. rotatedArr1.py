@@ -15,37 +15,37 @@
 #Step3: perform Binary Search on that side.
 #Step4: If element is not found perfom BS on other side
 
-def binarySearch(low, high, arr, target):
-    while(low <= high):
-        mid = (low + high) // 2
-        if(arr[mid] == target):
-            return mid
-        elif(target > arr[mid]):
-            low = mid + 1
-        else:
-            high = mid - 1
-    return -1
+# def binarySearch(low, high, arr, target):
+#     while(low <= high):
+#         mid = (low + high) // 2
+#         if(arr[mid] == target):
+#             return mid
+#         elif(target > arr[mid]):
+#             low = mid + 1
+#         else:
+#             high = mid - 1
+#     return -1
 
-def findTargetInRotatedArray(arr, target):
-    n = len(arr)
-    high = n - 1
-    low = 0
-    ans = -1
-    mid = (low + high) // 2
+# def findTargetInRotatedArray(arr, target):
+#     n = len(arr)
+#     high = n - 1
+#     low = 0
+#     ans = -1
+#     mid = (low + high) // 2
 
-    if(arr(mid) == target):
-        return mid
+#     if(arr(mid) == target):
+#         return mid
     
-    ans = binarySearch(low, mid, arr, target)
+#     ans = binarySearch(low, mid, arr, target)
 
-    if(ans == -1):
-        ans = binarySearch(mid+1, high, arr, target)
+#     if(ans == -1):
+#         ans = binarySearch(mid+1, high, arr, target)
 
-    print('target found on :', ans)
-    return ans
+#     print('target found on :', ans)
+#     return ans
 
-arr = [3,1]
-findTargetInRotatedArray(arr, 1)
+# arr = [3,1]
+# findTargetInRotatedArray(arr, 1)
 
 #Optimal Solution: BS O(LogN)
 #Step1: Create low, high and mid Index
@@ -82,3 +82,8 @@ def search(arr, n, k):
                 # element does not exist
                 high = mid - 1
     return -1
+
+
+arr = [4,5,6,7,0,1,2]
+target = 0
+search(arr, len(arr), target)
