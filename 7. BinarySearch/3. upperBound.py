@@ -18,11 +18,13 @@ def upperBound(nums, target):
 
     while(low <= high):
         mid = (low + high) // 2
+
         if(nums[mid] > target):
             output = mid
             high = mid - 1
         else:
             low = mid + 1
+            
     return output
 
 print(upperBound([1,2,2,3], 2))

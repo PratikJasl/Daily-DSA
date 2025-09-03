@@ -11,7 +11,6 @@
 #Step2: Implement Upper bound to find last index
 #Step3: Calculate count using fist and last index
 #Step4: handle edge cases.
-[1,2,4,5,5,5] 
 
 def lowerBound(nums, target):
     n = len(nums)
