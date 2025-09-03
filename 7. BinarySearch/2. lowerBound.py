@@ -26,7 +26,6 @@ def lowerBound(nums, target):
             low = mid + 1
     return output
 
-
 nums = [3,5,8,15,19]
 target = 1
 print(lowerBound(nums, target))
