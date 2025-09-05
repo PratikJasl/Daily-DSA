@@ -14,13 +14,10 @@ async function serveMealAsync() {
   console.log("1. Chef: Starting to prepare meal...");
   console.log("2. Chef: While rice is cooking, I can clean the counter or pour drinks!");
   console.log("3. Chef: Waiting for rice to be ready...");
-
   const cookedRice = await cookRiceAsync();
-
   console.log("4. Chef: " + cookedRice);
   console.log("5. Chef: Meal is ready!");
 }
-
 console.log("A. Customer: I've ordered a meal.");
 
 serveMealAsync();
