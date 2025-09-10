@@ -37,5 +37,4 @@ def FindMinimum(nums):
         minimum = Search(low, mid, nums, minimum)
     
     print(minimum)
-
 FindMinimum([])
