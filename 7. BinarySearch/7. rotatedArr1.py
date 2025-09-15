@@ -50,7 +50,7 @@
 #Optimal Solution: BS O(LogN)
 #Step1: Create low, high and mid Index
 #Step2: Check which part of the array is sorted
-#Step3: On the sorted part search of the element
+#Step3: On the sorted part search for the element
 #Step4: if not found on sorted part find on non-sorted part
 
 def search(arr, n, k):
