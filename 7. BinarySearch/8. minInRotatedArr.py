@@ -10,7 +10,7 @@
 #Step2: Do a minimum between the current element and minimum.
 
 # Optimal Solution: BS : O(logN)
-# Step1: assign the high low and mid index
+# Step1: assign the high, low and mid index
 # Step2: Find the sorted side, and store the minimum
 # Step3: Run LS on non sorted side
 
