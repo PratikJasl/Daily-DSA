@@ -12,21 +12,14 @@
 
 
 def ReverseWords(str):
-    temp = str.strip(" ")
-    string = ""
-    count = 0
-    for i in temp:
-        if temp[i] != " ":
-            string = string + temp[i]
-            count = 0
-        elif temp[i] == " " & count < 2:
-            count += 1
-            string = string + temp[i]
-    print(string)
+    words = str.split()
+    words.reverse()
+    result = " ".join(words)
+    return result
 
 
 
     
 
 
-print(ReverseWords(" the sky is blue "))
+print(ReverseWords(" the sky is    blue "))
