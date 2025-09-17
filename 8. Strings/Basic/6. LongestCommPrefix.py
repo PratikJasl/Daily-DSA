@@ -1,3 +1,22 @@
+# Write a function to find the longest common prefix string amongst an array of strings.
+
+# Example 1:
+# Input: strs = ["flower","flow","flight"]
+# Output: "fl"
+
+#Brute Force: O(n^2)
+#  step1: Loop thourgh the first string.
+#  Step2: comapre the first letter of the first string with all other strings.
+#  Step3: if all the first letters are equal add it to prefix.
+#  step4: else check the next letter.
+#  Step5: return the prefix at end.
+
+
+#Optimal Solution: O(n)
+#Step1: Sort the string and find the smallest and largest strings
+#Step2: Loop through the length of smallest among the two strings.
+#Step3: Compare the two string, if characters are equal add to answer.
+#Step4: Return if characters are not equal
 def LongestCommPrefix(strs):
         if not strs:
             return ""
