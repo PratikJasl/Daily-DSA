@@ -42,7 +42,6 @@
         
 #     return True
 
-
 #Optimal: Time: O(n) Space: O(n)
 #Step1: Check the length of two strings if not equal return false
 #Step2: Loop through one string.
