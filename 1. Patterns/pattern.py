@@ -128,7 +128,6 @@ def TriangleRight():
             string += ' '
         string += '\n'
     print(string)
-
 # Pattern11: Print a left-Triangle with numbers 0 and 1.
 def LeftTrianglePattern1():
     string = ""
