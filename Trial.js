@@ -35,4 +35,17 @@ function printLeftAngleTriangle(n){
     console.log(result);
 }
 
-printLeftAngleTriangle(5);
+function printRightAngleTriangle(n){
+    let result = "";
+    for(let i = 0; i <= n; i++){
+        for(let j = 0; j<n-i; j++){
+            result += " ";
+        }
+        for (let k = 0; k < i; k++) {
+            result += "*";
+        }
+        result +="\n";
+    }
+    console.log(result);
+}
+printRightAngleTriangle(5);
