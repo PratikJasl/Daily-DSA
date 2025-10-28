@@ -1,17 +1,15 @@
-# Selection Sort
-# Select the minimum and move it to the start.
-# 2 Points, 1 minIndex
+# Insertion Sort
+# pointer: i, j Variable: Current
 
-def selectionSort(arr):
+def insertionSort(arr):
     n = len(arr)
-    for i in range (n):
-        minIndex = i
-        for j in range(i+1, n):
-            if(arr[j] < arr[minIndex]):
-                minIndex = j
-        if(minIndex != i):
-            arr[i], arr[minIndex] = arr[minIndex], arr[i]
+    for i in range(1,n):
+        j = i-1
+        current = arr[i]
+        while(j>=0 and arr[j] > current):
+            arr[j], arr[j+1] = arr[j+1], arr[j]
+            j -= 1
     print("Sorted Array:", arr)
-    return arr
+    return arr 
 
-selectionSort([1,5,7,3,2,4,8,6,9])
+insertionSort([5,1,4,3,2])   
