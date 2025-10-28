@@ -1,20 +1,15 @@
-# Bubble Sort
-# Swap and move largest to the end.
-# Pointer i, swapped.
+# Insertion Sort
+# pointer: i, j Variable: Current
 
-def BubbleSort(arr):
+def insertionSort(arr):
     n = len(arr)
-    while True:
-        swapped = False
-        for i in range(n-1):
-            if(arr[i] > arr[i+1]):
-                arr[i], arr[i+1] = arr[i+1], arr[i]
-                swapped = True
-        if not swapped:
-            break
-        n -= 1
-    print("Sorted Array :", arr)
-    return arr
+    for i in range(1,n):
+        j = i-1
+        current = arr[i]
+        while(j>=0 and arr[j] > current):
+            arr[j], arr[j+1] = arr[j+1], arr[j]
+            j -= 1
+    print("Sorted Array:", arr)
+    return arr 
 
-BubbleSort([2,5,1,4])
-            
+insertionSort([5,1,4,3,2])   
