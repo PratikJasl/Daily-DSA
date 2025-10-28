@@ -1,29 +1,17 @@
-#Extract digits from a number.
-num = 2598
+# Selection Sort
+# Select the minimum and move it to the start.
+# 2 Points, 1 minIndex
 
-def extractdigit(N):
-    while(N > 0):
-        lastDigit = N % 10
-        print(lastDigit)
-        N = int(N/10)
+def selectionSort(arr):
+    n = len(arr)
+    for i in range (n):
+        minIndex = i
+        for j in range(i+1, n):
+            if(arr[j] < arr[minIndex]):
+                minIndex = j
+        if(minIndex != i):
+            arr[i], arr[minIndex] = arr[minIndex], arr[i]
+    print("Sorted Array:", arr)
+    return arr
 
-#Reverse a number: 2598
-def reverseNum(N):
-    sum = 0
-    while(N > 0):
-        lastDigit = N % 10
-        sum = (sum * 10) + lastDigit
-        N = int(N/10)
-    print(sum)
-
-#Armstrong number: 371
-def armstrongNum(N):
-    n = N
-    sum = 0
-    while(N > 0):
-        lastDigit = N % 10
-        sum += (lastDigit*lastDigit*lastDigit)
-        N = int(N/10)
-    return (sum == n)
-
-print(armstrongNum(375))
+selectionSort([1,5,7,3,2,4,8,6,9])
