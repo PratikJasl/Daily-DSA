@@ -1,15 +1,26 @@
-# Insertion Sort
-# pointer: i, j Variable: Current
+#Remove Duplicates from a sorted array.
+arr = [1,1,2]
 
-def insertionSort(arr):
+#Brute Force using a set: T: O(n) | S: O(n)
+def removeDublicates(arr):
+    unique = set()
+    index = 0
+    for i in range(len(arr)):
+        if(arr[i] not in unique):
+            unique.add(arr[i])
+            arr[index] = arr[i]
+            index += 1
+    print(arr, unique)
+removeDublicates(arr)
+
+#Optimal solution: T:O(N) | S:O(1)
+def removeDublicatesO(arr):
     n = len(arr)
-    for i in range(1,n):
-        j = i-1
-        current = arr[i]
-        while(j>=0 and arr[j] > current):
-            arr[j], arr[j+1] = arr[j+1], arr[j]
-            j -= 1
-    print("Sorted Array:", arr)
-    return arr 
+    j = 0
+    for i in range(n-1):
+        if(arr[i] != arr[j]):
+            j+=1
+            arr[i] = arr[j]
+    print(arr)
 
-insertionSort([5,1,4,3,2])   
+removeDublicatesO(arr)
