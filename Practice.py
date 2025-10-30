@@ -1,26 +1,13 @@
-#Remove Duplicates from a sorted array.
-arr = [1,1,2]
+#Rotate array by k
+arr  = [1,2,3,4,5,6]
+k = 6
 
-#Brute Force using a set: T: O(n) | S: O(n)
-def removeDublicates(arr):
-    unique = set()
-    index = 0
-    for i in range(len(arr)):
-        if(arr[i] not in unique):
-            unique.add(arr[i])
-            arr[index] = arr[i]
-            index += 1
-    print(arr, unique)
-removeDublicates(arr)
-
-#Optimal solution: T:O(N) | S:O(1)
-def removeDublicatesO(arr):
+def rotateArray(arr, k):
     n = len(arr)
-    j = 0
-    for i in range(n-1):
-        if(arr[i] != arr[j]):
-            j+=1
-            arr[i] = arr[j]
+    k = k%n
+    rotated = arr[n-k:]
+    notRotated = arr[:n-k]
+    arr[:] = rotated + notRotated
     print(arr)
 
-removeDublicatesO(arr)
+rotateArray(arr, k)
