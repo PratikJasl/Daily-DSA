@@ -1,13 +1,11 @@
-#Rotate array by k
-arr  = [1,2,3,4,5,6]
-k = 6
+#Array union
 
-def rotateArray(arr, k):
-    n = len(arr)
-    k = k%n
-    rotated = arr[n-k:]
-    notRotated = arr[:n-k]
-    arr[:] = rotated + notRotated
-    print(arr)
+arr1 = [1,2,3,7,4]
+arr2 = [2,2,3,5,6]
 
-rotateArray(arr, k)
+def arrayUnion(num1, num2):
+    combined = num1 + num2
+    unique = set(combined)
+    return list(unique)
+
+print(arrayUnion(arr1, arr2))
