@@ -24,6 +24,7 @@
 // console.log("B. Customer: While I wait, I can read a book or check my phone!");
 // console.log("C. Customer: Still waiting for the meal...");
 
+
 function printLeftAngleTriangle(n){
     let result = "";
     for(let i = 0; i <= n; i++){
