@@ -2,6 +2,8 @@
 
 arr = [1, 2, 3]
 
+# Using two pointers: T: O(N) | S: O(1)
+# For listing out all the possible subarrays this is the best solution.
 def find_all_subarrays(arr: [int]) -> [int]:
     n = len(arr)
     subarrays = []
