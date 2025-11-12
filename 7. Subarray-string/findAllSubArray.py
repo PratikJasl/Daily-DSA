@@ -2,7 +2,7 @@
 
 arr = [1, 2, 3]
 
-def find_all_subarrays(arr):
+def find_all_subarrays(arr: [int]) -> [int]:
     n = len(arr)
     subarrays = []
     for i in range(n):
@@ -10,5 +10,6 @@ def find_all_subarrays(arr):
             subarrays.append(arr[i:j+1])
     
     print("Total subarrays:", subarrays)
+    return subarrays
 
 find_all_subarrays(arr)

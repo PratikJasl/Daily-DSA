@@ -1,28 +1,27 @@
 #Find the longest subarry with sum k.
 
-#Brute Force Approach
+#Brute Force Approach: T: O(n^3)
 #Step1: Find all possible subarrays.
 #Step2: Calculate sum of each subarray.
+#Step3: Keep track of maximum length subarray.
 
 arr = [2,3,5,1,9]
-k = 10
+k = 5
 
 def getLongestSubarray(a: [int], k: int) -> int:
-    n = len(a) # size of the array.
+    n = len(a)
+    maxLength = 0
 
-    length = 0
-    for i in range(n): # starting index
-        for j in range(i, n): # ending index
-            # add all the elements of
-            # subarray = a[i...j]:
-            s = 0
-            for K in range(i, j+1):
-                s += a[K]
+    for i in range(n):
+        for j in range(i, n):
+            sum = 0
+            for z in range(i, j+1):
+                sum += arr[z]
 
-            if s == k:
-                length = max(length, j - i + 1)
-    print(length)
-    return length
+            if(sum == k):
+                maxLength = max(maxLength, j-i+1)
     
+    print(maxLength)
+    return maxLength
 
 getLongestSubarray(arr, k)
