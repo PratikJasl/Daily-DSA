@@ -1,5 +1,5 @@
 #Find all possible subarrays of a given array.
-
+# We use two pointers. T:O(n^2)
 arr = [1, 2, 3]
 
 def find_all_subarrays(arr: list[int]) -> list[int]:
