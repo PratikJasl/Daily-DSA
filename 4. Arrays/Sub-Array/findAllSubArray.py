@@ -2,7 +2,7 @@
 
 arr = [1, 2, 3]
 
-def find_all_subarrays(arr: [int]) -> [int]:
+def find_all_subarrays(arr: list[int]) -> list[int]:
     n = len(arr)
     subarrays = []
     for i in range(n):
