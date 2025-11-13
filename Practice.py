@@ -1,11 +1,9 @@
-#Array union
+#Logest Subarray with given sum.
 
-arr1 = [1,2,3,7,4]
-arr2 = [2,2,3,5,6]
+arr = [2,3,5,2,2,1]
+k = 5
 
-def arrayUnion(num1, num2):
-    combined = num1 + num2
-    unique = set(combined)
-    return list(unique)
+def SubarraySum(arr, k):
+    n = len(arr)
+    sum = 0
 
-print(arrayUnion(arr1, arr2))
