@@ -1,9 +1,43 @@
-#Logest Subarray with given sum.
+# def longestSubarray(nums, k):
+#     n = len(nums)
+#     sum = nums[0]
+#     maxLen = 0
+#     left = 0
+#     right = 0
+#     print("Initial SUM:", sum)
+#     print("Array length", n)
+#     while(right < n-1):
+#         print("Inside While Loop")
+#         print("SUM:", sum)
+#         if(sum < k):
+#             right += 1
+#             sum += nums[right]
+#         elif(sum > k):
+#             left += 1
+#             sum -= nums[left]
+#         elif(sum == k):
+#             maxLen = max(maxLen, (right - left) + 1)
+#             print("MaxLen:", maxLen)
+#             sum -= nums[left]
+#             right += 1
+#             left += 1
+#             sum += nums[right]
+#     print(maxLen)
+#     return maxLen
 
-arr = [2,3,5,2,2,1]
-k = 5
 
-def SubarraySum(arr, k):
+# arr = [1, -1, 5, -2, 3]
+# k=3
+
+# longestSubarray(arr, k)
+
+def loop(arr: [int]) -> int:
     n = len(arr)
-    sum = 0
+    for i in range(n):
+        print("i->",i)
+        for j in range(i, n):
+            print("j->",j)
+            for z in range(i,j+1):
+                print("z->",z)
 
+loop([1,2,3,4])
