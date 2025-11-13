@@ -8,7 +8,7 @@
 arr = [2,3,5,1,9]
 k = 5
 
-def getLongestSubarray(a: [int], k: int) -> int:
+def getLongestSubarray(a: list[int], k: int) -> int:
     n = len(a)
     maxLength = 0
 
