@@ -32,7 +32,6 @@ Longest_Subarray_Sum(arr, k)
 #Step3: If sum is greater than K, reduce left.
 #Step4: If sum is less than k, increment right.
 #Step5: Update maxLength when sum is equal to K.
-#arr = [2,3,5,1,9]
 def longest_subarray_sum(a: list[int], k: int) -> int:
     n = len(a)
     left = 0
