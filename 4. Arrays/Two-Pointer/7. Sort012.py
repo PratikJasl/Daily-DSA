@@ -32,6 +32,7 @@ class Solution:
                 high -= 1
         print("Sorted Array:", nums)      
 
+#Calling using clsees.
 nums = [2,0,2,1,1,0]
 sol = Solution()
 sol.sortColors(nums) 
