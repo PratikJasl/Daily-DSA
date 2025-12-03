@@ -8,8 +8,7 @@ k = 1
 #Step2: Compute sum of the subarray.
 #Step3: Update maxLen when sum is equal to k.
 
-#Best Apporach for this question is using Prefix Sum: T: O(n) | S: O(n)
-
+#Best Apporach for this question is using Prefix Sum: T: O(n) | S: O(n) | SEE PREFIXSUM FOLDER
 def sub_array_sum(arr: list[int], k: int) -> int:
     n = len(arr)
     maxLength = 0

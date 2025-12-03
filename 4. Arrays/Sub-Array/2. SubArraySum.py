@@ -26,6 +26,24 @@ def Longest_Subarray_Sum(a: list[int], k: int) -> int:
     return maxLength
 Longest_Subarray_Sum(arr, k)
 
+#Better Solution: T: O(n^2)
+#Step1: Find all possible subarrays.
+#Step2: Calculate sum of each subarray, without an inner loop.
+#Step3: Keep track of maximum length subarray. 
+def longest_subarray_Sum(a: list[int], k: int):
+    n = len(a)
+    maximum = 0
+
+    for i in range(n):
+        sum = 0
+        for j in range(n):
+            sum += a[j]
+            if(sum == k):
+                maximum = max(maximum, j-i+1)
+    print("Better Solution:", maximum)
+    return maximum
+longest_subarray_Sum(arr, k)
+
 #Optimal Solution: T: O(2n) | S: O(1)
 #Step1: Create a Left and Right pointer starting at 0.
 #Step2: Compute sum.
