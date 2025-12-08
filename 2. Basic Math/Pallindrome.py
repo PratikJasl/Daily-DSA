@@ -1,8 +1,6 @@
 #Objective: Check if a number is pallindrome or not.
-
 #Input: 121
 #Output: true
-
 #Concept: We already saw how to reverse a digit, compare the original and reversed digit
 
 def IsPallindrome(N):

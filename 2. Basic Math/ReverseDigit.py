@@ -5,7 +5,6 @@
 #Concept: The extraction of digits concept extracts the digit in reverse order. We use it to extract digits 
 # then multiple it with a base of 10 and add the next digits.
 
-
 def ReverseNumber(N):
     Sum = 0
     while(N > 0):
