@@ -49,7 +49,6 @@ def find_subarray_sum(arr: list[int], k : int) -> int:
             length = i - prefix_sum[rem]
             maxLength = max(maxLength, length)
 
-
         if(sum not in prefix_sum):
             prefix_sum[sum] = i
     print("maxLength:", maxLength)
