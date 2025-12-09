@@ -1,5 +1,4 @@
 #Objective: Find all the divisors of a number.
-
 # Input: 36 
 # Output: divisors--> 1,2,3,4,6,9,12,18,36
 
