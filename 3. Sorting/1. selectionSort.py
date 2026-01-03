@@ -1,11 +1,8 @@
-
-
-
 array = [64, 25, 12, 22, 11]
 
-def selection_sort(arr):
+def selection_sort(arr): #T:O(N^2) S:O(1)
     n = len(arr)
-    for i in range(n):
+    for i in range(n-1):
         min_index = i
         for j in range(i+1, n):
             if arr[j] < arr[min_index]:
