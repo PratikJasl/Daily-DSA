@@ -1,14 +1,11 @@
 arr = [64, 25, 12, 22, 11, 10]
 
 def mergeSort(arr): #T: O(n log n) | S: O(n)
-    if len(arr) <= 1:
+    if len(arr) <= 1: #Base Condition
         return arr
     mid = len(arr) // 2 #Floor Division
-    l_half = arr[:mid]
-    r_half = arr[mid:]
-
-    left_part = mergeSort(l_half)
-    right_part = mergeSort(r_half)
+    left_part = mergeSort(arr[:mid])
+    right_part = mergeSort(arr[mid:])
 
     return merge(left_part, right_part)
 

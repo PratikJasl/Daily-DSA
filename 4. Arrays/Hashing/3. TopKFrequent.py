@@ -27,7 +27,4 @@ def top_k_frequent_element(nums, k):
     temp = [item[0] for item in frequent_element[:k]]
     print("Frequent Element:", frequent_element, temp)
     
-    
-    
-
 top_k_frequent_element(nums, k)
