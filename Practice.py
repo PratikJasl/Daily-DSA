@@ -1,17 +1,15 @@
-#Two Sum Problem
-nums = [3,3] 
-target = 6
+# arr = [64, 25, 12, 22, 11]
 
-def Two_Sum(nums, target):
-    n = len(nums)
-    hash_map = {}
+# def quickSort(arr, low, high):
+#     if low < high:
+#         partition_index = partition(arr, low, high)
+#         quickSort(arr, low, partition_index - 1)
+#         quickSort(arr, partition_index + 1, high)
+#     return arr
 
-    for i in range(n):
-        compliment = target - nums[i]
-        if(compliment in hash_map):
-            print( hash_map[compliment], i)
-            return [i, hash_map[compliment]]
-        elif(nums[i] not in hash_map):
-            hash_map[nums[i]] = i
-    
-Two_Sum(nums, target)
+# def partition(arr, low, high):
+#     pivot = arr[low]
+#     i = low
+#     j = high
+
+#     while (i < j):
