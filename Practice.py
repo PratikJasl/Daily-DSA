@@ -1,15 +1,17 @@
-# arr = [64, 25, 12, 22, 11]
+nums = [1,3,1,2,4,4]
+count = {}
+least_value = None
+least_count = float('inf')
 
-# def quickSort(arr, low, high):
-#     if low < high:
-#         partition_index = partition(arr, low, high)
-#         quickSort(arr, low, partition_index - 1)
-#         quickSort(arr, partition_index + 1, high)
-#     return arr
+for item in nums:
+    if item in count:
+        count[item] += 1
+    else:
+        count[item] = 1
 
-# def partition(arr, low, high):
-#     pivot = arr[low]
-#     i = low
-#     j = high
+for value, cnt in count.items():
+    if cnt < least_count:
+        least_count = cnt
+        least_value = value
 
-#     while (i < j):
+print(least_value)
