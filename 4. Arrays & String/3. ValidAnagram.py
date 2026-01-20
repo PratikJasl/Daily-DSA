@@ -26,7 +26,7 @@ def isAnagram(s: str, t: str) -> bool:
 
 # Optimal Approach: T: O(n) | S: O(n)
 # Step1: Create frequency map of both strings.
-# Step2: Compare both the frequency maps.
+# Step2: Compare both the frequency maps. (The comparison only works for dict and set since they are unordered)
 def isAnagram(s: str, t: str) -> bool:
     if(len(s) != len(t)):
         return False
