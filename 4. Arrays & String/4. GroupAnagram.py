@@ -5,16 +5,19 @@
 # Input: strs = ["eat","tea","tan","ate","nat","bat"]
 # Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
-def groupAnagrams(strs: list[str]) -> list[list[str]]:
-    anagram_map = {}
+def groupAnagrams(strs: list[str]) -> list[str]:
+    seen = {}
 
     for s in strs:
-        sorted_key = "".join(sorted(s))
+        final_key= "".join(sorted(s))
 
-        anagram_map[sorted_key].append(s)
+        if final_key in seen:
+            seen[final_key].append(s)
+        else:
+            seen[final_key] = [s]
     
-    print(anagram_map)
-        
-    return list(anagram_map.values())
+    print("Group Anagram:", list(seen.values()))
+    return(list(seen.values()))
+
 
 groupAnagrams(["eat","tea","tan","ate","nat","bat"])
