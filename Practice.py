@@ -1,17 +1,18 @@
-nums = [1,3,1,2,4,4]
-count = {}
-least_value = None
-least_count = float('inf')
+# Group Anagram
+strs = ["eat","tea","tan","ate","nat","bat"]
 
-for item in nums:
-    if item in count:
-        count[item] += 1
-    else:
-        count[item] = 1
+def groupAnagram(strs: list[str]) -> list[str]:
+    seen = {}
 
-for value, cnt in count.items():
-    if cnt < least_count:
-        least_count = cnt
-        least_value = value
+    for s in strs:
+        final_key= "".join(sorted(s))
 
-print(least_value)
+        if final_key in seen:
+            seen[final_key].append(s)
+        else:
+            seen[final_key] = [s]
+    
+    print("Group Anagram:", list(seen.values()))
+    return(list(seen.values()))
+
+groupAnagram(strs)
