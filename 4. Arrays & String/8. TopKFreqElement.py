@@ -6,14 +6,26 @@
 # output = [1,2]
 
 def top_k_frequent_element(nums, k):
-    freq = {}
-    for n in nums:
-        if n in freq:
-            freq[n] += 1
-        else:
-            freq[n] = 1
+    count = {}
+    freq = []
+    res = []
+    for i in range(len(nums)+1):
+        freq.append([])
 
-    print("Frequency Map:", freq)
+    for n in nums:
+        if n in count:
+            count[n] += 1
+        else:
+            count[n] = 1
+
+    for value, count in count.items():
+        freq[count].append(value)
+    
+    for i in range(len(freq)-1,0,-1):
+        for n in freq[i]:
+            res.append(n)
+            if(len(res) == k):
+                return res
 
 
 
