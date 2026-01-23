@@ -20,7 +20,6 @@ def twoSum(nums: list[int], target: int) -> list[int]:
 # Complexity: T:O(nlogn) | S:O(n)
 # We sort the array, so that we do not have to check all possible pairs.
 # But since the indexes are changed we store the indexes in a DS.
-
 def twoSum(self, nums: list[int], target: int) -> list[int]:
     # 1. Store pairs of (value, index) so we don't lose track
     # Input: [3, 2, 4] -> [(3,0), (2,1), (4,2)]
