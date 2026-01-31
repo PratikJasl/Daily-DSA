@@ -1,5 +1,5 @@
 # 15. 3 SUM
-#Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, 
+# Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, 
 # and nums[i] + nums[j] + nums[k] == 0.
 # Notice that the solution set must not contain duplicate triplets.
 
@@ -31,7 +31,9 @@ def threeSum(nums: list[int]) -> list[list[int]]:
 
 threeSum([1,-1,-1,0])
 
-def threeSum(self, nums: list[int]) -> list[list[int]]:
+# Optimal Solution: O(n^2)
+
+def threeSum(nums: list[int]) -> list[list[int]]:
     res = []
     nums.sort()  # 1. Sort the array (Essential for Two Pointers)
 
@@ -48,7 +50,8 @@ def threeSum(self, nums: list[int]) -> list[list[int]]:
             continue
 
         # 4. Standard Two Sum II logic
-        l, r = i + 1, len(nums) - 1
+        l = i + 1, 
+        r = len(nums) - 1
         while l < r:
             threeSum = a + nums[l] + nums[r]
             
