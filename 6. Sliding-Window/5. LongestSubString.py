@@ -1,6 +1,6 @@
 # 3. Longest Substring without Repeating Characters
 
-6 #Approach: O(n)
+6 #Approach: O(n) Variable Size Window
 7 #Step1: Create a Set, a maxCount and a left and right pointer variable.
 8 #Step2: Iterate through the string till right is less than length.
 9 #Step3: If element does not exist in set add it to set and increment right and count.
