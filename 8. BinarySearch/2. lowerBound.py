@@ -1,5 +1,5 @@
 # Problem Statement: Given a sorted array of N integers and an integer x, write a program to find the lower bound of x.
-#find the first element which is >= x.
+# find the first element which is >= x.
 # Example 1:
 # Input Format: arr[] = {1,2,2,3}, x = 2
 # Result: 1
