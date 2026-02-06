@@ -5,6 +5,7 @@
 # Result: 3
 # Explanation: Index 3 is the smallest index such that arr[3] > x.
 
+
 def UpperBound(nums, target):
     n = len(nums)
     low = 0
