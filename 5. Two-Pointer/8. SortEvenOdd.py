@@ -1,3 +1,10 @@
+# Given an array of int, make sure the even numbers appear first and then the Odd numbers.
+# Keep the relative order same and return the same array.
+
+# Example:
+# nums = [1,2,3,4,6,7]
+# result = [2,4,6,1,3,7]
+
 nums = [1,2,3,4,6,7]
 
 def SortEvenOdd(nums: list[int]):
