@@ -27,7 +27,7 @@
 # print(LastOccurance([5,7,7,8,8,10], 8))
 
 #------------------------------------------------------
-#Binary Search Approach: O(logN)
+#Binary Search Approach: O(log N)
 #Step1: Use lower bound to find the start index
 #Step2: Use Upper bound -1 to find end index
 #Step3: handle edge cases where it did not find the target and it returns a value not equal to target.

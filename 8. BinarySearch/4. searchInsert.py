@@ -5,7 +5,18 @@
 
 # Input: nums = [1,3,5,6], target = 5
 # Output: 2
+# Brute Force: Linear Check O(n)
+def searchInsert(nums: list[int], target: int) -> int:
+    n = len(nums)
+    for i in range(n):
+        if(nums[i] > target):
+            return i
+        elif(nums[i] == target):
+            return i 
 
+    return n
+
+# Optimal Approach: BS O(log n)
 def searchInsert(nums, target):
     n = len(nums)
     low = 0
