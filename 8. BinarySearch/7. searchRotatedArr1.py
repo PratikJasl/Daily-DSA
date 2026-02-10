@@ -1,5 +1,5 @@
 #Leet code: 33
-#Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
+# Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
 
 # Example 1:
 # Input: nums = [4,5,6,7,0,1,2], target = 0
@@ -9,12 +9,12 @@
 #Step1: Iterte through the array.
 #Step2: Return the index if target is found else -1.
 
-#Less Optimal: Binary Search O(logN) : Fails in some Edge cases
+#---------------------------------------------------------------------------------------------#
+# Less Optimal: Binary Search O(logN) : Fails in some Edge cases
 #Step1: Create low, high and mid indexes
 #Step2: Check is target is greater than low or less then high to determine which side is valid.
 #Step3: perform Binary Search on that side.
 #Step4: If element is not found perfom BS on other side
-
 # def binarySearch(low, high, arr, target):
 #     while(low <= high):
 #         mid = (low + high) // 2
@@ -47,11 +47,12 @@
 # arr = [3,1]
 # findTargetInRotatedArray(arr, 1)
 
-#Optimal Solution: BS O(LogN)
-#Step1: Create low, high and mid Index
-#Step2: Check which part of the array is sorted
-#Step3: On the sorted part search for the element
-#Step4: if not found on sorted part find on non-sorted part
+#---------------------------------------------------------------------------------------------#
+# Optimal Solution: BS O(LogN)
+# Step1: Create low, high and mid Index
+# Step2: Check which part of the array is sorted
+# Step3: On the sorted part search for the element
+# Step4: if not found on sorted part find on non-sorted part
 
 def search(arr, n, k):
     low = 0
