@@ -5,36 +5,37 @@
 # Output: 1
 # Explanation: The original array was [1,2,3,4,5] rotated 3 times.
 
-#BruteForce: O(n)
+#BruteForce: Linear Search: O(n)
 #Step1: Iterate through the loop
 #Step2: Do a minimum between the current element and minimum.
+
+def LinearSearch(nums):
+    minimum = nums[0]
+    for i in range(len(nums)):
+        minimum = min(nums[i], minimum)
+    return minimum
 
 # Optimal Solution: BS : O(logN)
 # Step1: assign the high, low and mid index
 # Step2: Find the sorted side, and store the minimum
 # Step3: Run LS on non sorted side
 
-def Search(low, high, nums, minimum):
-    while(low <= high):
-        minimum = min(nums[low], nums[high], minimum)
-        low = low+1
-    return minimum
+class Solution:
+    def findMin(self, nums: list[int]) -> int:
+        n = len(nums)
+        low = 0
+        high = n - 1
+        mid = (low + high) // 2
 
-
-def FindMinimum(nums):
-    if len(nums) < 1: 
-        return 0
-    low = 0
-    high = len(nums) - 1
-    mid = (low + high) // 2
-    minimum = 1000000
-
-    if(nums[low] <= nums[mid]):
-        minimum = min(nums[low], minimum)
-        minimum = Search(mid, high, nums, minimum)
-    else:
-        minimum = min(nums[mid], minimum)
-        minimum = Search(low, mid, nums, minimum)
+        if(nums[mid] > nums[high]):
+            minimum = self.LinearSearch(nums, mid, high+1)
+        else:
+            minimum = self.LinearSearch(nums, low, mid+1)
+        
+        return minimum
     
-    print(minimum)
-FindMinimum([])
+    def LinearSearch(self, nums, start, end):
+        minimum = nums[start]
+        for i in range(start, end):
+            minimum = min(nums[i], minimum)
+        return minimum
