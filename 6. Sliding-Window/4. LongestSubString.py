@@ -6,6 +6,7 @@
 9 #Step3: If element does not exist in set add it to set and increment right and count.
 10 #Step4: If element does not exist delete the first element, and increment
 
+
 def lengthOfLongestSubstring(self, s: str) -> int:
     n = len(s)
     seen = set()
