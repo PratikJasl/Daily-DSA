@@ -11,9 +11,11 @@ def twoSum(nums: list[int], target: int) -> list[int]:
             if(nums[i] + nums[j] == target):
                 return [i,j]
             
+
 # Optimal Solution: Two Pointers
 # Complexity: T:O(n) | S:O(1)
 # Since the array is sorted, we no longer have to check all possible pairs.
+# We use opposite ends Two Pointers
 def twoSum(numbers: list[int], target: int) -> list[int]:
     n = len(numbers)
     left = 0
