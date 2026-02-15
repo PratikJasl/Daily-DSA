@@ -59,6 +59,7 @@ class SinglyLinkedList:
             temp = temp.next
         print(temp.data)
 
+
 obj = SinglyLinkedList()
 obj.insert_at_end(10)
 obj.insert_at_end(20)
