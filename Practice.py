@@ -3,6 +3,8 @@ class Node:
         self.data = data
         self.next = next
 
+
+
 class Singly_linked_list:
     def __init__(self, head = None):
         self.head = head
