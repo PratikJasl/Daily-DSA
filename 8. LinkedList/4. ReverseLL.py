@@ -1,5 +1,7 @@
 # 206. Reverse Linked List:
 
+# Approach: Using a List
+# BIG O: T:O(n), s:O(n)
 def reverseList(self, head):
     values = []
     temp = head
@@ -8,6 +10,7 @@ def reverseList(self, head):
         values.append(temp.val)
         temp = temp.next
     print("Array Created:", values)
+
     # Step2: Use the list to reverse the linked list.
     i = len(values) - 1
     temp = head
