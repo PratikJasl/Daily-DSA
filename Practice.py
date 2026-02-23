@@ -4,7 +4,7 @@ class Node:
         self.next = next
 
 
-
+# Singly Linked List
 class Singly_linked_list:
     def __init__(self, head = None):
         self.head = head
