@@ -40,6 +40,7 @@ def mergeTwoLists(list1, list2):
 
 # Appoach: Optimal
 # BigO: T:O(N) | S:O(1)
+# Use two pointers
 def mergeTwoLists(list1, list2):
     dummy = ListNode(-1)
     current = dummy
