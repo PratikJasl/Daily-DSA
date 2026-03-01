@@ -4,19 +4,17 @@
 # Example:
 # nums = [1,2,3,4,6,7]
 # result = [2,4,6,1,3,7]
+nums = [4, 7, 8, 10]
 
-nums = [1,2,3,4,6,7]
+#Approch: 
+# Step1: Sort the Array to ensure odd elements are present first.
+# Step2: Whenever right pointer is even swap left and right and increment both.
+# Step3: Else just increment left
 
 def SortEvenOdd(nums: list[int]):
     n = len(nums)
+    nums.sort()
     left = 0
-
-    for i in range(n):
-        if(nums[i] % 2 != 0):
-            right = i
-            print(nums[i], right)
-            break
-
     right = left + 1
 
     while(left < right and right < n):
