@@ -6,6 +6,15 @@
 # Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 # Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
+# Brute Force:
+# Step1: Sort the array.
+# Step2: return profit between first and last index.
+
+# Optimal Solution
+# Step1: Create a min_price and max_profit variable.
+# Step2: Iterate through the array.
+# Step3: Compute profit,
+# Step4: Update min_price and max_profit
 def maxProfit(prices: list[int]) -> int:
     n = len(prices)
     min_price = prices[0]
