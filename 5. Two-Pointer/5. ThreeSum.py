@@ -32,7 +32,10 @@ def threeSum(nums: list[int]) -> list[list[int]]:
 threeSum([1,-1,-1,0])
 
 # Optimal Solution: O(n^2)
-
+# Step1: Sort the array.
+# Step2: Iterate over the array.
+# Step3: Perform two sum.
+# Step4: Avoid, seeing the same "i" and "l" twice, move forward if previous and current are same.
 def threeSum(nums: list[int]) -> list[list[int]]:
     res = []
     nums.sort()  # 1. Sort the array (Essential for Two Pointers)
