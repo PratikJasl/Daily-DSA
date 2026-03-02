@@ -1,35 +1,38 @@
-nums = [4,1,2,3]
-output = [2,3,4,1]
+# Top K frequent elements.
 
-#Step1: Store all odd indexs value in an array and sort them in descreaing order.
-#Step2: Store all even indexes value in an array and sort them in ascending order.
-#Step3: Iterate through the original array and replace even indexes with elements of 
-
-def sort_even_odd(nums: list[int]):
+def top_k_frequent(nums: list[int], k: int) -> list[int]:
     n = len(nums)
-    even_indexs = []
-    odd_indexs = []
-    j = 0
-    k = 0
+    freq = {}
+    bucket = []
+    result = []
 
+    # Step1: Freq map
     for i in range(n):
-        if (i % 2 == 0):
-            even_indexs.append(nums[i])
+        if nums[i] in freq:
+            freq[nums[i]] += 1
         else:
-            odd_indexs.append(nums[i])
+            freq[nums[i]] = 1
     
-    even_indexs.sort()
-    odd_indexs.sort(reverse=True)
-    print(even_indexs, odd_indexs)
+    print("frequency:", freq)
 
+    # Step2: Create Empty Buckets
     for i in range(n):
-        if(i % 2 == 0 and j < len(even_indexs)):
-            nums[i] = even_indexs[j]
-            j += 1
-        elif(i % 2 != 0 and k < len(odd_indexs)):
-            nums[i] = odd_indexs[k]
-            k += 1
+        bucket.append([])
     
-    print(nums)
+    print('Empty bucket', bucket)
 
-sort_even_odd([2,1])
+    # Step3: Fill buckets
+    for value, count in freq.items():
+        bucket[count].append(value)
+    
+    print("Filled Bucket:", bucket)
+
+    # Step4: Choose top k from bucket
+    for i in range(n-1, -1, -1):
+        for n in bucket[i]:
+            result.append(n)
+            if(len(result) == k):
+                print("final Result:", result)
+                return result
+
+top_k_frequent([1,1,1,2,2,3], 2)
