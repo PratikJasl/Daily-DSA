@@ -23,10 +23,22 @@ def reorderList(self, head: ListNode) -> None:
     # Step2: Slipt the list in two halves
     second = slow.next
     slow.next = None
-    node = None
+    Prev = None
+    Next = None
 
     # Step3: Reverse the second half of ll.
     while second:
-        temp = second.next
-        second.next = node
+        Next = second.next
+        second.next = Prev
+        Prev = second
+        second = Next
+    
+    # Step4: Merge the two halves, using 4 pointers
+    first = head
+    second = Prev
+
+    while second:
+        temp1, temp2 = first.next, second.next
+        first.next, second.next = second, temp1
+        first, second = temp1, temp2
         
