@@ -2,7 +2,6 @@
 # Design a stack which can return the minimum element in O(1), 
 # and also perform all standard operations.
 
-
 class minStack:
     def __init__(self):
         self.stack = []
@@ -10,7 +9,7 @@ class minStack:
     
     def push(self, val):
         self.stack.append(val)
-        if( not self.min_stack or val <= self.min_stack[-1]):
+        if(not self.min_stack or val <= self.min_stack[-1]):
             self.min_stack.append(val)
     
     def pop(self):
