@@ -1,22 +1,21 @@
-def containerWithMostWater(nums: list[int]) -> int:
-    if(not nums):
+def longestSubstring(s: list[str]) -> int:
+    if not s:
         return 0
     
-    n = len(nums)
-    low = 0
-    high = n - 1
-    max_volume = 0
-    
-    while(low < high):
-        min_element = min(nums[low], nums[high])
-        volume = (min_element) * (high - low)
-        max_volume = max(volume, max_volume)
-
-        if(nums[low] < nums[high]):
-            low += 1
+    n = len(s)
+    seen = set()
+    max_count = 0
+    right = 0
+    left = 0
+    while(right < n):
+        if(s[right] not in seen):
+            seen.add(s[right])
+            right += 1
+            max_count = max(len(seen), max_count)
         else:
-            high -= 1
-    
-    return max_volume
+            seen.clear()
+        print(seen)
+    return max_count
 
-print(containerWithMostWater([1, 1]))
+
+print(longestSubstring('dvdf'))
