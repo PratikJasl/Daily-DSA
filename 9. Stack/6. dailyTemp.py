@@ -26,7 +26,7 @@ def dailyTemperatures(temperatures) -> list[int]:
     return output
 
 # Optimum Solution: Using Stack (Monotonic stack)
-# Step1: Create an output array and fill it with zero's.
+# Step1: Create an output array and fill it wi  th zero's.
 # Step2: Create a stack which stores a pair [temp, index].
 # Step3: When we encounter a temp we store its temp and index in stack.
 # Step4: Next if we encounter a temp greater than our top of stack temp. We pop our stack and update output.
