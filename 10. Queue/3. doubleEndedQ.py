@@ -64,3 +64,4 @@ class Deque:
             self.rear.next = None        # Sever the tie to the old node
             
         return popped_val
+
