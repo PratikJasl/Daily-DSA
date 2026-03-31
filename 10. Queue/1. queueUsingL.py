@@ -14,7 +14,7 @@ class Queue:
     def enqueue(self, value):
         self.items.append(value)
     
-    def dequeue(self):
+    def dequeue(self): #O(n) complexity since pop(0) shifts elements front
         if(self.isEmpty()):
             return 'Queue is Empty'
         else:
