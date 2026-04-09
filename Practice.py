@@ -1,21 +1,20 @@
-def longestSubstring(s: list[str]) -> int:
-    if not s:
-        return 0
-    
-    n = len(s)
-    seen = set()
-    max_count = 0
-    right = 0
-    left = 0
-    while(right < n):
-        if(s[right] not in seen):
-            seen.add(s[right])
-            right += 1
-            max_count = max(len(seen), max_count)
-        else:
-            seen.clear()
-        print(seen)
-    return max_count
+def maxSlidingWindow(nums: list[int], k: int) -> list[int]:
+    if(len(nums) < 2):
+        return nums
 
+    l = 0
+    r = k-1
+    output = []
 
-print(longestSubstring('dvdf'))
+    while(r < len(nums)):
+        Sum = 0
+        for i in range(l, r+1):
+            Sum += nums[i]
+        
+        output.append(Sum)
+        l += 1
+        r = k-1
+        
+    return output
+
+print(maxSlidingWindow([1,3,-1,-3,5,3,6,7], k=3 ))

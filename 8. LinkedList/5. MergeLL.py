@@ -42,13 +42,13 @@ def mergeTwoLists(list1, list2):
 # BigO: T:O(N) | S:O(1)
 # Use two pointers
 def mergeTwoLists(list1, list2):
-    dummy = ListNode(-1)
-    current = dummy
+    output = ListNode(-1) #Creates a new node with value -1.
+    current = output      #Adds a pointer to the output LL.
         
     # While both lists have nodes, compare and attach the smaller one
     while list1 and list2:
         if list1.val <= list2.val:
-            current.next = list1
+            current.next = list1 #we attach the smaller one to output LL using pointer current.
             list1 = list1.next
         else:
             current.next = list2
@@ -61,4 +61,4 @@ def mergeTwoLists(list1, list2):
     elif list2:
         current.next = list2
         
-    return dummy.next
+    return output.next
