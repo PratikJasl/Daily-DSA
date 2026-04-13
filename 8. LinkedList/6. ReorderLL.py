@@ -11,7 +11,7 @@ class ListNode:
         self.val = val
         self.next = next
 
-def reorderList(self, head: ListNode) -> None:
+def reorderList(head: ListNode) -> None:
     slow = head
     fast = head
 

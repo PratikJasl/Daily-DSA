@@ -1,20 +1,28 @@
-def maxSlidingWindow(nums: list[int], k: int) -> list[int]:
-    if(len(nums) < 2):
+def mergeSort(nums):
+    #Base Condition:
+    if len(nums) <= 1:
         return nums
 
-    l = 0
-    r = k-1
-    output = []
+    mid = len(nums) // 2
+    left_part = mergeSort(nums[:mid])
+    right_part = mergeSort(nums[mid:])
+    return merge(left_part, right_part)
 
-    while(r < len(nums)):
-        Sum = 0
-        for i in range(l, r+1):
-            Sum += nums[i]
-        
-        output.append(Sum)
-        l += 1
-        r = k-1
-        
-    return output
+def merge(left, right):
+    temp = []
+    i, j = 0, 0
 
-print(maxSlidingWindow([1,3,-1,-3,5,3,6,7], k=3 ))
+    while(i < len(left) and j < len(right)):
+        if(left[i] < right[j]):
+            temp.append(left[i])
+            i += 1
+        else:
+            temp.append(right[j])
+            j += 1
+    
+    temp.extend(left[i:])
+    temp.extend(right[j:])
+
+    return temp
+
+print(mergeSort([38,27]))
