@@ -6,7 +6,10 @@ def reverseLL(head):
     
     new_head = reverseLL(head.next)
 
-    pass
+    head.next.next = head
+    head.next = None
+
+    return new_head
 
     
 
