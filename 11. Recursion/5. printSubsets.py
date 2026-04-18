@@ -10,6 +10,7 @@ def print_subsets(arr, index=0, current_subset=[]):
     # Recursive Call 2: Exclude the current element
     print_subsets(arr, index + 1, current_subset)
 
+
 # Example Usage
 my_array = [1, 2, 3]
 print_subsets(my_array)
