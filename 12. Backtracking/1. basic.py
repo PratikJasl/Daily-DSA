@@ -25,3 +25,4 @@ def solve_problem(input_data):
             
     backtrack([], input_data)
     return results
+
