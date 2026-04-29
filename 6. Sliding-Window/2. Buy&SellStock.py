@@ -7,10 +7,10 @@
 # Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
 # Brute Force:
-# Step1: Sort the array.
-# Step2: return profit between first and last index.
+# Step1: Use nested loop and check all the profit combination.
+# Step2: return max profit .
 
-# Optimal Solution
+# Optimal Solution: Kadane's Algorith variation
 # Step1: Create a min_price and max_profit variable.
 # Step2: Iterate through the array.
 # Step3: Compute profit,
@@ -28,3 +28,9 @@ def maxProfit(prices: list[int]) -> int:
         min_price = min(prices[i], min_price)
     
     return max_profit
+
+# Optimal Solution: Using Two Pointers
+# Step 1: Create left and right pointers.
+# Step 2: If price of left is less than right, then calculate profit and move only right
+# Step 3: If price of left is more than right, move both left and right.
+
